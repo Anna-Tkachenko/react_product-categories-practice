@@ -5,7 +5,7 @@ import './App.scss';
 import usersFromServer from './api/users';
 import productsFromServer from './api/products';
 import categoriesFromServer from './api/categories';
-import { Product } from './types';
+import { Product, SortField } from './types';
 import { ProductTable } from './components/ProductTable';
 
 function getUserById(id?: number) {
@@ -35,14 +35,6 @@ const products: Product[] = productsFromServer.map(product => {
 // sortBy -> sort by === previousValue -> call reverse
 // if no -> set sort by == new value && reset reverse
 // sortBy -> sort by === previousValue -> reset
-
-export enum SortField {
-  ID = 'id',
-  Product = 'product',
-  Category = 'category',
-  User = 'user',
-  None = 'none',
-}
 
 export const App: React.FC = () => {
   const [selectedUserId, setSelectedUserId] = useState(0);

@@ -18,3 +18,11 @@ export interface Product {
   user: User | null;
   category: Category | null;
 }
+
+export enum SortField {
+  ID = 'id',
+  Product = 'product',
+  Category = 'category',
+  User = 'user',
+  None = 'none',
+}

@@ -1,9 +1,8 @@
 import React from 'react';
 import cn from 'classnames';
-import { Product } from '../../types';
+import { Product, SortField } from '../../types';
 import { ProductCategory } from '../ProductCategory';
 import { ProductUser } from '../ProductUser';
-import { SortField } from '../../App';
 
 type Props = {
   products: Product[];
